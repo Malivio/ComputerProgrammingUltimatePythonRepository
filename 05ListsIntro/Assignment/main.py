@@ -10,9 +10,9 @@ def equal_edges(arr):
         return False
 
 def common_edge(arr1, arr2):
-    if arr1[0] == arr2[0] or arr1[0] == arr2[1]:
+    if arr1[0] == arr2[0] or arr1[0] == arr2[-1]:
         return True
-    elif arr1[1] == arr2[0] or arr1[1] == arr2[1]:
+    elif arr1[-1] == arr2[0] or arr1[-1] == arr2[-1]:
         return True
     else:
         return False
@@ -24,10 +24,10 @@ def all_the_same(arr):
         return False
 
 def all_unique(arr):
-    if arr[0] == arr[1] or arr[1] == arr[2] or arr[0] == arr[2]:
-        return False
-    else:
+    if arr[0] != arr[1] and arr[1] != arr[2] and arr[0] != arr[2]:
         return True
+    else:
+        return False
 
 def increasing(arr):
     if arr[0] + 1 == arr[1] and arr[1] + 1 == arr[2]:
@@ -50,14 +50,13 @@ def mostly_true(arr):
 def random_list(length, amount):
     x = []
     for n in range(amount):
-        x.push(random.randint(length[0], length[1]))
+        x.append(random.randint(length[0], length[1]))
     return x
 
 def main():
     print("make_abc")
     print(make_abc())
-    print("\n")
-
+    
     print("equal_edges")
     for iterate in range(5):
         n = random.randint(1,5)
@@ -65,8 +64,66 @@ def main():
             x = random_list([1,9], 3)
             i = random.randint(1,9)
             x.insert(0, i)
-            x.insert(-1, i)
+            x.append(i)
+            print(x, equal_edges(x))
+        else:
+            x = random_list([1,9], 5)
             print(x, equal_edges(x))
 
+    print("common_edges")
+    for iterate in range(5):
+        n = [random_list([1,9], 5),random_list([1,9], 5)]
+        print(n[0], n[1], common_edge(n[0], n[1]))
 
+    print("all_the_same")
+    for iterate in range(5):
+        n = random.randint(1,5)
+        if n <= 2:
+            x = random.randint(1,9)
+            print([x,x,x], all_the_same([x,x,x]))
+        else:
+            x = random_list([1,9], 3)
+            print(x, all_the_same(x))
+    
+    print("all_unique")
+    for iterate in range(5):
+        n = random.randint(1,7)
+        if n == 1:
+            x = random.randint(1,9)
+            print([x,x,x], all_unique([x,x,x]))
+        else:
+            x = random_list([1,9], 3)
+            print(x, all_unique(x))
+    
+    print("increasing")
+    for iterate in range(5):
+        n = random.randint(1,5)
+        if n <= 2:
+            x = random.randint(1,9)
+            print([x,x + 1,x + 2], increasing([x,x + 1,x + 2]))
+        else:
+            x = random_list([1,9], 3)
+            print(x, increasing(x))
+            
+    print("all_true")
+    for iterate in range(5):
+        n = [random.randint(0,1), random.randint(0,1), random.randint(0,1)]
+        i = []
+        for x in n:
+            if x == 1:
+                i.append(True)
+            else:
+                i.append(False)
+        print(i, all_true(n))
+
+    print("mostly_true")
+    for iterate in range(5):
+        n = [random.randint(0,1), random.randint(0,1), random.randint(0,1)]
+        i = []
+        for x in n:
+            if x == 1:
+                i.append(True)
+            else:
+                i.append(False)
+        print(i, mostly_true(n))
 main()
