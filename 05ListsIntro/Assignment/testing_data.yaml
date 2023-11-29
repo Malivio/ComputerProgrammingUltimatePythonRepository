@@ -1,0 +1,156 @@
+make_abc:
+  - input: []
+    output: [a, b, c]
+
+equal_edges:
+  - input: [[1, 2, 3, 4, 1]]
+    output: true
+
+  - input: [[1, 2, 3, 4]]
+    output: false
+
+  - input: [[1, 0]]
+    output: false
+
+  - input: [[5, 5]]
+    output: true
+
+common_edge:
+  - input:
+      - [1, 2, 3, 4]
+      - [5, 6, 7, 8]
+    output: false
+
+  - input:
+      - [1, 2, 3]
+      - [3, 4, 5]
+    output: true
+
+  - input:
+      - [4, 5, 6]
+      - [7, 8, 9]
+    output: false
+
+  - input:
+      - [-1, 0, 1, 2, -1]
+      - [2, 3, 4, 5]
+    output: false
+
+  - input:
+      - [3, 3, 3]
+      - [3, 3, 3]
+    output: true
+
+all_the_same:
+  - input:
+      - [1, 2, 3]
+    output: false
+  - input:
+      - [5, 5, 5]
+    output: true
+  - input:
+      - [-1, 0, 1]
+    output: false
+  - input:
+      - [3, 3, 3]
+    output: true
+  - input:
+      - [4, 5, 6]
+    output: false
+
+all_unique:
+  - input:
+      - [1, 2, 3]
+    output: false
+  - input:
+      - [5, 5, 5]
+    output: false
+  - input:
+      - [-1, 0, 1]
+    output: true
+  - input:
+      - [3, 3, 3]
+    output: false
+  - input:
+      - [4, 5, 6]
+    output: true
+
+increasing:
+  - input:
+      - [1, 2, 3]
+    output: True
+  - input:
+      - [5, 5, 5]
+    output: False
+  - input:
+      - [-1, 0, 1]
+    output: True
+  - input:
+      - [3, 3, 3]
+    output: False
+  - input:
+      - [4, 5, 6]
+    output: True
+
+all_true:
+  - input:
+      - [True, False, True]
+    output: False
+  - input:
+      - [False, False, False]
+    output: False
+  - input:
+      - [True, True, True]
+    output: True
+  - input:
+      - [False, True, False]
+    output: False
+  - input:
+      - [True, False, False]
+    output: False
+
+mostly_true:
+  - input:
+      - [True, False, True]
+    output: True
+  - input:
+      - [False, False, False]
+    output: False
+  - input:
+      - [True, True, True]
+    output: True
+  - input:
+      - [False, True, False]
+    output: False
+  - input:
+      - [True, False, False]
+    output: False
+
+make_copy:
+  - input:
+      - [5, 6, 1]
+    output: [5, 6, 1]
+
+repeat_thrice:
+  - input:
+      - -1
+    output: [-1, -1, -1]
+  - input:
+      - 5
+    output: [5, 5, 5]
+
+make_reversed_copy:
+  - input:
+      - [1, 2, 3]
+    output: [3, 2, 1]
+  - input:
+      - [13, 5, 6]
+    output: [6, 5, 13]
+
+reverse_in_place:
+  - input:
+      - [1, 2, 3]
+    output: [3, 2, 1]
+  - input:
+      - [13, 5, 6]
+    output: [6, 5, 13]

@@ -30,3 +30,28 @@ def are_reversed(list1, list2):
 
 print("Demonstrate are_reversed")
 print("[1, 2, 4] & [3, 2, 1] -> ", are_reversed([1, 2, 4], [3, 2, 1]))
+
+def make_repeated_max(items):
+    maxvalue = max(items)
+    return [maxvalue, maxvalue, maxvalue]
+
+print("Demonstrate make_repeated_max")
+original_list = [3, 5, 1]
+new_list = make_repeated_max(original_list)
+print("original list: ", original_list)
+print("new list: ", new_list)
+
+
+def overwrite_with_max(items):
+    maxvalue = max(items)
+    items[0] = maxvalue
+    items[1] = maxvalue
+    items[2] = maxvalue
+
+    return items
+
+print("Demonstrate overwrite_with_max")
+original_list = [3, 5, 1]
+new_list = overwrite_with_max(original_list)
+print("original list: ", original_list)
+print("new list: ", new_list)
