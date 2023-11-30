@@ -61,7 +61,7 @@ all_the_same:
 all_unique:
   - input:
       - [1, 2, 3]
-    output: false
+    output: true
   - input:
       - [5, 5, 5]
     output: false

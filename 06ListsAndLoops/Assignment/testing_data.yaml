@@ -1,0 +1,16 @@
+mostly_true:
+  - input:
+      - [True, False, True]
+    output: True
+  - input:
+      - [False, False, False]
+    output: False
+  - input:
+      - [True, True, True]
+    output: True
+  - input:
+      - [False, True, False]
+    output: False
+  - input:
+      - [True, False, False]
+    output: False
