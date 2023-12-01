@@ -29,6 +29,14 @@ def average_act_score(scores):
             i += 1
     return n/i
 
+def any_true(arr): return True in arr
+
+def has_vowel(arr):
+    for l in arr:
+        if l in ["a", 'i', 'e', 'o', 'u']:
+            return True
+    return False
+
 def main():
     print("count_failing_grades")
     for iterate in range(5):
@@ -44,17 +52,26 @@ def main():
             n.append(random.randint(-20, 50))
         print(n, "=>",count_act_scores(n))
     
-    print("count_act_scores")
+    print("number_sum")
     for iterate in range(5):
         n = []
         for j in range(5):
             n.append(random.randint(-10, 100))
         print(n, "=>", number_sum(n))
 
-    print("count_act_scores")
+    print("average_act_score")
     for iterate in range(5):
         n = []
         for j in range(5):
             n.append(random.randint(-20, 50))
         print(n, "=>", average_act_score(n)) 
+        
+    print("any_true")
+    for iterate in range(5):
+        n = [bool(random.randint(0,1)),bool(random.randint(0,1)),bool(random.randint(0,1))]
+        print(n, any_true(n))
+
+    for iterate in range(5):
+
+
 main()
