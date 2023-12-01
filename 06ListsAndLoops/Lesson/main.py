@@ -35,3 +35,20 @@ def number_mean(numbers):
 inputlist = [2, 5, 9, 11]
 result = number_mean(inputlist)
 print(result)
+
+def all_vowels(letters):
+    # # using previous function
+    # number_of_vowels = count_vowels(letters)
+    # if number_of_vowels == len(letters):
+    #     return True
+    # else:
+    #     return False
+
+    # from scratch (faster to execute)
+    for letter in letters:
+        if letter not in ["a", "e", "i", "o", "u"]:
+            return False
+    return True
+
+print(all_vowels(["a", "e", "a", "i", "u", "o"]))
+print(all_vowels(["a", "e", "s", "i", "u", "o"]))

@@ -13,3 +13,19 @@
 1. `average_act_score`
 
     Write a function that takes a list of numbers. Some of them are valid ACT scores, others are not. The function should calculate the mean of the numbers that are valid ACT scores (and ignore the numbers that are outside the range), then return that mean.
+
+1. `all_true`
+
+    Write a function that takes a list of boolean (`True` or `False`) values. It should return `True` if they are all `True`, and `False` otherwise.
+
+1. `any_true`
+
+    Write a function that takes a list of boolean values. It should return `True` if any of the values are `True`, and `False` otherwise.
+
+1. `mostly_true` (+)
+
+    Write a function that takes a list of boolean values. It should return `True` if most of them are `True`, and `False` otherwise.
+
+1. `has_vowel`
+
+    Write a function that takes a list of single characters as input. It should return `True` if any of the characters in the list is a vowel. If none of them are, return `False`
