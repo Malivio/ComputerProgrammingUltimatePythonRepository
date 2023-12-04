@@ -41,6 +41,39 @@ def has_vowel(arr):
             return True
     return False
 
+def all_the_same(arr): return arr.count(arr[0]) == len(arr)
+
+def increasing(arr):
+    for x in range(len(arr) - 1):
+        if arr[x] >= arr[x + 1]:
+            return False
+    return True
+
+def is_incrementing(arr):
+    for x in range(len(arr) - 1):
+        if arr[x] != arr[x + 1]:
+            return False
+    return True
+
+def has_adjacent_repeat(arr):
+    for x in range(len(arr) - 1):
+        if arr[x] == arr[x + 1]:
+            return True
+    return False
+
+def sum_with_skips(arr):
+    n = 0
+    skip = False
+    for x in arr:
+        if x == -1:
+            if skip:
+                skip = False
+            else:
+                skip = True
+        elif not skip:
+            n += x
+    return n
+
 def randomList():
     n = []
     for x in range(random.randint(0,9)):
@@ -99,5 +132,61 @@ def main():
             letters.append(numToLetter[random.randint(0,25)])
         print(letters, '=>', has_vowel(letters))
         
+    print("all_the_same")
+    for iterate in range(5):
+        n = random.randint(1,9)
+        arr = [n]
+        for iter in range(2):
+            if random.randint(0,1):
+                arr.append(n)
+            else:
+                arr.append(random.randint(1,9))
+        print(arr, "=>", all_the_same(arr))
+
+    print("increasing")
+    for iterate in range(5):
+        n = random.randint(1,9)
+        arr = [n]
+        for iter in range(random.randint(2,4)):
+            if random.randint(0,1):
+                n += random.randint(1,3)
+                arr.append(n)
+            else:
+                arr.append(random.randint(1,9))
+        print(arr, "=>", increasing(arr))
+
+    print("is_incrementing")
+    for iterate in range(5):
+        n = random.randint(1,9)
+        arr = [n]
+        for iter in range(random.randint(2,4)):
+            if random.randint(0,1):
+                arr.append(n + 1)
+            else:
+                arr.append(random.randint(1,9))
+        print(arr, "=>", is_incrementing(arr))
+    
+    print("has_adjacent_repeat")
+    for iterate in range(5):
+        arr = []
+        for iter in range(5):
+            arr.append(random.randint(1,9))
+        print(arr, "=>", has_adjacent_repeat(arr))
+
+    print("sum_with_skips")
+    for iterate in range(5):
+        arr = []
+        for iter in range(random.randint(5,9)):
+            arr.append(random.randint(1,9))
+        x = random.randint(0,len(arr) - 1)
+        y = random.randint(0,len(arr) - 1)
+        if x == y:
+            for lll in arr:
+                lll = random.randint(1,9)
+        else:
+            arr[x] = -1
+            arr[y] = -1
+        print(arr, "=>", sum_with_skips(arr))
+
 
 main()
