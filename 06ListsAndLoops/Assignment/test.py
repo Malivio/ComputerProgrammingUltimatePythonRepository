@@ -35,7 +35,44 @@ class TestFunctions(unittest.TestCase):
         with open(os.path.join(__location__, "testing_data.yaml"), "r") as file:
             cls.data = yaml.safe_load(file)
 
-    # TODO: implement tests
+    def test_count_failing_grades(self):
+        execute_test(self, main, "count_failing_grades", self.data)
+
+    def test_count_act_scores(self):
+        execute_test(self, main, "count_act_scores", self.data)
+    
+    def test_number_sum(self):
+        execute_test(self, main, "number_sum", self.data)
+
+    def test_average_act_score(self):
+        execute_test(self, main, "average_act_score", self.data)
+    
+    def test_all_true(self):
+        execute_test(self, main, "all_true", self.data)
+
+    def test_any_true(self):
+        execute_test(self, main, "any_true", self.data)
+
+    def test_mostly_true(self):
+        execute_test(self, main, "mostly_true", self.data)
+    
+    def test_has_vowel(self):
+        execute_test(self, main, "has_vowel", self.data)
+    
+    def test_all_the_same(self):
+        execute_test(self, main, "all_the_same", self.data)
+
+    def test_increasing(self):
+        execute_test(self, main, "increasing", self.data)
+
+    def test_is_incrementing(self):
+        execute_test(self, main, "is_incrementing", self.data)
+
+    def test_has_adjacent_repeat(self):
+        execute_test(self, main, "has_adjacent_repeat", self.data)
+
+    def test_sum_with_skips(self):
+        execute_test(self, main, "sum_with_skips", self.data)
     
 if __name__ == '__main__':
     unittest.main(verbosity=2, exit=False, catchbreak=False)

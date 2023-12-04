@@ -52,3 +52,30 @@ def all_vowels(letters):
 
 print(all_vowels(["a", "e", "a", "i", "u", "o"]))
 print(all_vowels(["a", "e", "s", "i", "u", "o"]))
+
+def sum13(nums):
+    total = 0
+    just_saw_13 = False
+    for num in nums:
+        if num == 13:
+            just_saw_13 = True
+        elif just_saw_13 == True:
+            just_saw_13 = False
+        else:
+            total = total + num
+
+    return total
+
+def sum67(nums):
+    total = 0
+    ignoring = False
+
+    for num in nums:
+        if num == 6:
+            ignoring = True
+        elif ignoring == True and num == 7:
+            ignoring = False
+        elif ignoring == False:
+            total = total + num
+    
+    return total
