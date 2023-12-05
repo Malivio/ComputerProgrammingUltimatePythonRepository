@@ -10,7 +10,7 @@ def count_failing_grades(grades):
 def count_act_scores(scores):
     n = 0
     for x in scores:
-        if x <= 36 or x >= 1:
+        if x <= 36 and x >= 1:
             n += 1
     return n
 
@@ -24,12 +24,15 @@ def average_act_score(scores):
     n = 0
     i = 0
     for x in scores:
-        if x <= 36 or x >= 1:
+        if x <= 36 and x >= 1:
             n += x
             i += 1
-    return n/i
+    if i:
+        return n/i
+    else:
+        return None
 
-def all_true(arr): return not False in arr and len(arr) > 0
+def all_true(arr): return not False in arr
 
 def any_true(arr): return True in arr and len(arr) > 0
 
@@ -51,7 +54,7 @@ def increasing(arr):
 
 def is_incrementing(arr):
     for x in range(len(arr) - 1):
-        if arr[x] != arr[x + 1]:
+        if arr[x] + 1 != arr[x + 1]:
             return False
     return True
 
@@ -80,7 +83,7 @@ def randomList():
         n.append(bool(random.randint(0,1)))
     return n
 
-def main():
+'''def main():
     print("count_failing_grades")
     for iterate in range(5):
         n = []
@@ -189,4 +192,4 @@ def main():
         print(arr, "=>", sum_with_skips(arr))
 
 
-main()
+main()'''

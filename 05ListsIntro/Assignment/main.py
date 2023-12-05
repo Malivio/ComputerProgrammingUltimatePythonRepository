@@ -72,7 +72,7 @@ def reverse_in_place(arr):
     arr.pop(2)
     return arr
 
-def main(n = 0):
+'''def main(n = 0):
 
     if n == 1 or n == 0:
         print("make_abc")
@@ -170,4 +170,4 @@ def main(n = 0):
             n = x.copy()
             print(n, "=>", reverse_in_place(x))
 
-main()
+main()'''
