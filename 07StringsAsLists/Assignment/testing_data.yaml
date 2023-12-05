@@ -1,0 +1,79 @@
+is_alliteration:
+  - input: ["apple", "ant"]
+    output: true
+  - input: ["banana", "cat"]
+    output: false
+  - input: ["apple", "apple"]
+    output: true
+  - input: ["banana", "banana"]
+    output: true
+  - input: ["cat", "dog"]
+    output: false
+  - input: ["elephant", "eagle"]
+    output: true
+
+count_vowels:
+  - input: ["apple"]
+    output: 2
+  - input: ["banana"]
+    output: 3
+  - input: [""]
+    output: 0
+  - input: ["elephant"]
+    output: 3
+  - input: ["eagle"]
+    output: 3
+  - input: ["cat"]
+    output: 1
+  - input: ["dog"]
+    output: 1
+
+count_numbers:
+  - input: ["123abc"]
+    output: 3
+  - input: ["abc"]
+    output: 0
+  - input: [""]
+    output: 0
+  - input: ["456def"]
+    output: 3
+  - input: ["789ghi"]
+    output: 3
+  - input: ["jkl"]
+    output: 0
+  - input: ["mno"]
+    output: 0
+
+count_target_letters:
+  - input: ["apple", "a"]
+    output: 1
+  - input: ["banana", "a"]
+    output: 3
+  - input: ["", "a"]
+    output: 0
+  - input: ["elephant", "e"]
+    output: 2
+  - input: ["eagle", "e"]
+    output: 2
+  - input: ["cat", "c"]
+    output: 1
+  - input: ["dog", "d"]
+    output: 1
+
+in_alphabetical_order:
+  - input: ["abc"]
+    output: true
+  - input: ["cba"]
+    output: false
+  - input: [""]
+    output: true
+  - input: ["defgh"]
+    output: true
+  - input: ["fedcba"]
+    output: false
+  - input: ["ghijkl"]
+    output: true
+  - input: ["lkjihg"]
+    output: false
+  - input: ["mnopqr"]
+    output: true

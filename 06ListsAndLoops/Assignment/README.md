@@ -47,4 +47,7 @@
    Take a list of integers as input. The list will have at least two elements. Return `True` if there is an "adjacent repeat", that is, if somewhere in the list the same number appears twice in a row. If there are no adjacent repeats, return `False`.
 
 1. `sum_with_skips`
+
    Take a list of integers as input. Return the sum of all the integers, except ignore sections of the list between instances of -1. For example, [1, 2, 3, -1, 4, 5, 6, -1, 7] should return 1 + 2 + 3 + 7 = 13.
+
+
