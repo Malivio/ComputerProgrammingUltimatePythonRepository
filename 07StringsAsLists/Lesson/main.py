@@ -30,4 +30,44 @@ print(last_in_alphabet("apple"))
 print(last_in_alphabet("bcdfghj"))
 
 
+# to add elements to the end of a list:
+mylist = [1, 2, 3]
+mylist.append(4)
+print(mylist)
+
+# to add elements to the end of a string:
+mystring = "abc"
+mystring = mystring + "d"
+
+"a very useful pot".title()
+def to_title_case(string):
+    result = ""
+    next_upper = True
+    for letter in string:
+        if letter == " ":
+            next_upper = True
+            result = result + letter
+        elif next_upper == True:
+            result = result + letter.upper()
+            next_upper = False
+        else:
+            result = result + letter
+    
+    return result
+
+print(to_title_case("a very useful pot"))
+
+def without_zeros(numbers):
+    result = []
+    for number in numbers:
+        if number == 0:
+            pass
+        else:
+            result.append(number)
+    return result
+
+print(without_zeros([31, 0, 32, 0, 0, 5]))
+
+
+
 

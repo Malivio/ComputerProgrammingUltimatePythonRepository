@@ -50,6 +50,24 @@ class TestFunctions(unittest.TestCase):
     def test_in_alphabetical_order(self):
         execute_test(self, main, "in_alphabetical_order", self.data)
 
+    def test_alternating_case(self):
+        execute_test(self, main, "alternating_case", self.data)
+
+    def test_remove_vowels(self):
+        execute_test(self, main, "remove_vowels", self.data)
+    
+    def test_to_camel_case(self):
+        execute_test(self, main, "to_camel_case", self.data)
+
+    def test_to_snake_case(self):
+        execute_test(self, main, "to_snake_case", self.data)
+    
+    def test_without_duplicates(self):
+        execute_test(self, main, "without_duplicates", self.data)
+    
+    def test_filter_valid_act_scores(self):
+        execute_test(self, main, "filter_valid_act_scores", self.data)
+
     
 if __name__ == '__main__':
     unittest.main(verbosity=2, exit=False, catchbreak=False)

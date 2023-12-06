@@ -77,3 +77,51 @@ in_alphabetical_order:
     output: false
   - input: ["mnopqr"]
     output: true
+
+alternating_case:
+  - input: ["python"]
+    output: "PyThOn"
+  - input: ["github"]
+    output: "GiThUb"
+  - input: ["copilot"]
+    output: "CoPiLoT"
+
+remove_vowels:
+  - input: ["apple"]
+    output: "ppl"
+  - input: ["banana"]
+    output: "bnn"
+  - input: ["elephant"]
+    output: "lphnt"
+
+to_camel_case:
+  - input: ["hello world"]
+    output: "helloWorld"
+  - input: ["to camel case"]
+    output: "toCamelCase"
+  - input: ["another test case"]
+    output: "anotherTestCase"
+
+to_snake_case:
+  - input: ["Hello World"]
+    output: "Hello_World"
+  - input: ["To Snake Case"]
+    output: "To_Snake_Case"
+  - input: ["Another Test Case"]
+    output: "Another_Test_Case"
+
+without_duplicates:
+  - input: [[1, 2, 3, 3, 1]]
+    output: [1, 2, 3, 1]
+  - input: [[4, 4, 5, 5, 6, 6]]
+    output: [4, 5, 6]
+  - input: [[7, 7, 8, 8, 9, 9]]
+    output: [7, 8, 9]
+
+filter_valid_act_scores:
+  - input: [[1, 2, 3, 4, 5, 36, 37, 38]]
+    output: [1, 2, 3, 4, 5, 36]
+  - input: [[10, 20, 30, 40, 50]]
+    output: [10, 20, 30]
+  - input: [[15, 25, 35, 45]]
+    output: [15, 25, 35]
