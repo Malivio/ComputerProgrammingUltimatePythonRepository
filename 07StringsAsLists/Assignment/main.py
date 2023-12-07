@@ -19,3 +19,40 @@ def in_alphabetical_order(str1):
         if not ord(str1[x].lower()) == ord(str1[x + 1].lower()) - 1:
                 return False
     return True
+
+def alternating_case(word):
+    i = ""
+    for x in range(len(word)):
+        if int(x/2) == x/2:
+            i += word[x].upper()
+        else:
+            i += word[x]
+    return i
+
+def remove_vowels(str1): return str1.replace("a","").replace("e","").replace("i","").replace("o","").replace("u","")
+
+def to_camel_case(str1):
+    str1.strip()
+    str2 = str1[0]
+    for x in range(len(str1) - 1):
+        if str1[x] == " ":
+            str2 += str1[x + 1].upper()
+        else:
+            str2 += str1[x + 1]
+    return str2.replace(" ", "")
+
+def to_snake_case(str1): return str1.replace(" ", "_")
+
+def without_duplicates(arr1):
+    i = [arr1[0]] 
+    for x in arr1:
+            if i[-1] != x:
+                i.append(x)
+    return i
+
+def filter_valid_act_scores(arr1):
+    i = []
+    for x in arr1: 
+        if x <= 36 and x >= 1:
+            i.append(x)
+    return i
