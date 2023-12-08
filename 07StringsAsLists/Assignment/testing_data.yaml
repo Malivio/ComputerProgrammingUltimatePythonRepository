@@ -78,7 +78,7 @@ in_alphabetical_order:
   - input: ["mnopqr"]
     output: true
 
-alternating_case:
+alternate_case:
   - input: ["python"]
     output: "PyThOn"
   - input: ["github"]
