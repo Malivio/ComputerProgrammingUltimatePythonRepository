@@ -1,7 +1,7 @@
 import csv
+import json
 import os
 
-# allow files to be read from the current location
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -32,7 +32,19 @@ for row in reader:
         longest_name = name
 
 print("senior with longest name is: ", longest_name)
-
-
-
 f.close()
+
+f = open("../data/1000-largest-us-cities.json", "r")
+cities = json.load(f)
+f.close()
+
+print(cities[0]["city"])
+print(cities[1]["latitude"])
+
+total_population = 0
+for city in cities:
+    if city["state"] == "Kansas":
+        total_population = total_population + int(city["population"])
+
+print("population in kansas cities is:", total_population)
+
