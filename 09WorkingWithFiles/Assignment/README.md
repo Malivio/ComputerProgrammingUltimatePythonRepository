@@ -33,3 +33,11 @@ Find:
 
 1. Find the state which had the fastest average growth, and the fastest average shrinkage (+)
 
+## `childDetails.json`
+
+1. Find the longest and shortest names in the file (these could belong to the children, their guardians, or their siblings).
+
+1. Find the children with the highest and lowest household incomes (combined incomes of guardians).
+
+1. Suppose the inheritance a child earns is equal to the household income divided equally between them and all their siblings. Find the children with the highest and lowest inheritances.
+
